@@ -1,0 +1,323 @@
+body {
+    border: 5px solid white;  /* Border tổng màu trắng */
+    box-sizing: border-box;  /* Đảm bảo chiều rộng và chiều cao bao gồm cả border */
+    font-family: 'Arial', sans-serif; /* Thiết lập font chữ cho toàn bộ trang */
+    margin: 0; /* Bỏ mặc định margin của body */
+    padding: 0; /* Bỏ mặc định padding của body */
+    color: #333; /* Màu chữ mặc định */
+}
+
+/* Lớp này được sử dụng cho phần đầu của danh mục sản phẩm */
+.top {
+    display: flex; /* Sử dụng Flexbox để căn chỉnh các phần tử trong top */
+    justify-content: space-between; /* Đẩy nội dung hai bên cách xa nhau */
+    align-items: center; /* Căn giữa theo chiều dọc nếu cần */
+    padding-top:20px; /* Khoảng cách trên */
+    padding-bottom: 1px; /* Khoảng cách dưới */
+    border-bottom: 1px; /* Đường viền dưới */
+    height: 30px; /* Chiều cao */
+}
+
+.tt-nam {
+    text-align: left; /* Đảm bảo nội dung căn trái */
+}
+
+.lst-category {
+    display: flex; /* Sử dụng Flexbox cho danh sách các danh mục */
+    justify-content: space-between; /* Đẩy các mục danh mục cách xa nhau */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.category-item {
+    padding-right:10px; /* Khoảng cách bên phải mỗi mục danh mục */
+}
+
+.category-item a {
+    text-decoration: none; /* Bỏ gạch chân cho liên kết */
+    color: black; /* Màu chữ đen cho liên kết */
+    font-size:0.9em; /* Kích thước chữ */
+}
+
+/* Header */
+header {
+    background-color: #333; /* Màu nền cho header */
+    color: white; /* Màu chữ trắng */
+    padding: 10px 20px; /* Padding cho header */
+    display: flex; /* Sử dụng Flexbox cho header */
+    flex-direction: column; /* Sắp xếp các phần tử theo cột */
+    align-items: center; /* Căn giữa các phần tử trong header */
+}
+
+.top-bar {
+    width: 100%; /* Chiều rộng full */
+    display: flex; /* Sử dụng Flexbox */
+    justify-content: space-between; /* Đẩy các phần tử ra hai bên */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.contact-info, .top-nav {
+    display: flex; /* Sử dụng Flexbox cho thông tin liên hệ và menu */
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+}
+
+.top-nav ul {
+    display: flex; /* Sử dụng Flexbox cho menu */
+    list-style: none; /* Loại bỏ dấu chấm */
+    padding: 0; /* Bỏ padding của ul */
+}
+
+.top-nav ul li {
+    margin: 0 10px; /* Khoảng cách giữa các mục trong menu */
+}
+
+.top-nav ul li a {
+    color: white; /* Màu chữ trắng cho liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.top-nav ul li a:hover {
+    color: #fec5c1; /* Màu chữ khi hover vào liên kết */
+}
+
+.main-nav ul {
+    display: flex; /* Sử dụng Flexbox cho main-nav */
+    list-style: none; /* Loại bỏ dấu chấm */
+    gap: 20px; /* Khoảng cách giữa các mục */
+    padding: 0; /* Bỏ padding */
+}
+
+.main-nav ul li a {
+    color: white; /* Màu chữ trắng cho liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.search-bar {
+    display: flex; /* Sử dụng Flexbox cho thanh tìm kiếm */
+    margin: 10px 0; /* Khoảng cách trên và dưới của thanh tìm kiếm */
+}
+
+.search-bar input {
+    padding: 5px; /* Khoảng cách trong input */
+    width: 300px; /* Chiều rộng của input */
+}
+
+.search-bar button {
+    padding: 5px; /* Khoảng cách trong button */
+    background-color: #555; /* Màu nền của button */
+    color: white; /* Màu chữ trắng */
+    border: none; /* Bỏ đường viền */
+}
+
+/* Banner Section */
+.banner {
+    background: url(../images/nen.png) center/cover no-repeat; /* Đặt ảnh nền cho banner */
+    color: white; /* Màu chữ trắng */
+    text-align: center; /* Căn giữa nội dung trong banner */
+    padding: 100px 20px; /* Padding cho banner */
+}
+
+.banner h2 {
+    font-size: 2.5em; /* Kích thước chữ cho tiêu đề */
+    margin: 0; /* Bỏ margin */
+    color: ghostwhite; /* Màu chữ */
+    font-family: "Roboto Thin"; /* Font chữ cho tiêu đề */
+}
+
+.banner p {
+    margin: 10px 0 20px; /* Khoảng cách trên, dưới của đoạn văn */
+    font-size: 1.2em; /* Kích thước chữ */
+    color: white;   /* Màu chữ */
+}
+
+.banner button {
+    padding: 10px 20px; /* Padding cho button */
+    background-color: #333; /* Màu nền của button */
+    color: white; /* Màu chữ của button */
+    border: none; /* Bỏ đường viền */
+    cursor: pointer; /* Đổi con trỏ khi hover vào button */
+}
+
+.banner button a {
+    color: white; /* Màu chữ cho liên kết trong button */
+    text-decoration: none; /* Bỏ gạch chân */
+    font-size: 1.2em; /* Kích thước chữ */
+    font-weight: bolder; /* Đậm chữ */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 cột trên màn hình nhỏ */
+    }
+}
+
+@media (max-width: 480px) {
+    .category-grid {
+        grid-template-columns: 1fr; /* Hiển thị 1 cột trên màn hình rất nhỏ */
+    }
+}
+
+.hr {
+    border: 2.1px solid black; /* Đường viền màu đen */
+    border-radius: 5px; /* Bo tròn góc của đường viền */
+}
+
+/* Product Sections */
+.product-grid {
+    display: grid; /* Sử dụng Grid để hiển thị sản phẩm */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Tự động điều chỉnh số cột */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    max-width: 1500px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa */
+}
+
+.product-item {
+    border: 1px solid black; /* Đường viền cho sản phẩm */
+    padding: 15px; /* Padding cho mỗi sản phẩm */
+    padding-bottom: 0px; /* Bỏ padding dưới cùng */
+    border-radius: 4px; /* Bo tròn góc */
+    transition: transform 0.3s; /* Hiệu ứng chuyển động khi hover */
+    width: fit-content; /* Chiều rộng tự động */
+    height: 331px; /* Chiều cao cố định */
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+
+.product-item a img {
+    width: 100%; /* Chiều rộng của hình ảnh */
+    height: 70%; /* Chiều cao của hình ảnh */
+    border-radius: 8px; /* Bo tròn góc của hình ảnh */
+}
+
+.product-item h3 {
+    font-size: 0.9em; /* Kích thước chữ */
+    color: #333; /* Màu chữ */
+    margin: 10px 0 5px; /* Khoảng cách trên và dưới */
+    white-space: none; /* Không cho phép ngắt dòng */
+}
+
+.product-item p {
+    color: #555; /* Màu chữ */
+    padding-bottom:20px; /* Khoảng cách dưới cùng */
+    font-size:0.9em; /* Kích thước chữ */
+}
+
+.original-price {
+    text-decoration: line-through; /* Gạch ngang cho giá gốc */
+    color: #999; /* Màu chữ cho giá gốc */
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Màu nền cho footer */
+    color: white; /* Màu chữ trắng */
+    padding: 20px 0; /* Padding cho footer */
+    text-align: center; /* Căn giữa nội dung trong footer */
+}
+
+.footer-content {
+    max-width: 1200px; /* Chiều rộng tối đa cho footer content */
+    margin: 0 auto; /* Căn giữa */
+    padding: 0 20px; /* Padding bên trái và phải */
+}
+
+.footer-content p {
+    margin: 0; /* Bỏ margin */
+    font-size: 0.9em; /* Kích thước chữ */
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative; /* Cần thiết cho dropdown-content */
+    display: inline-block; /* Hiển thị inline */
+}
+
+.nava a {
+    font-weight: bolder; /* Chữ đậm cho các liên kết trong dropdown */
+}
+
+.dropdown-content {
+    display: none; /* Ẩn menu dropdown mặc định */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    background-color: #222222; /* Màu nền cho dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng cho dropdown */
+    min-width: 160px; /* Chiều rộng tối thiểu */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Hiển thị dropdown khi hover vào dropdown */
+}
+
+
+
+/* Dropdown menu styles */
+/* Định dạng phần tử chứa menu thả xuống */
+.dropdown {
+    position: relative; /* Đặt vị trí tương đối để các phần tử con có thể được định vị tuyệt đối dựa trên phần tử này */
+    display: inline-block; /* Đặt phần tử thành khối nội tuyến để có thể đứng cạnh các phần tử khác */
+}
+
+/* Định dạng các liên kết trong thanh điều hướng */
+.nava a {
+    font-weight: bolder; /* Tăng độ đậm của chữ để nổi bật hơn */
+}
+
+/* Định dạng nội dung bên trong menu thả xuống */
+.dropdown-content {
+    display: none; /* Ẩn nội dung menu thả xuống ban đầu */
+    position: absolute; /* Định vị tuyệt đối nội dung này bên trong .dropdown */
+    background-color: #222222; /* Màu nền tối cho menu thả xuống */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Thêm bóng để tạo chiều sâu */
+    padding: 12px 16px; /* Thêm khoảng cách bên trong nội dung menu */
+    z-index: 1; /* Đảm bảo menu thả xuống xuất hiện trên các phần tử khác */
+}
+
+/* Hiển thị menu thả xuống khi người dùng di chuột qua phần tử chứa menu */
+.dropdown:hover .dropdown-content {
+    display: block; /* Hiển thị nội dung menu khi di chuột */
+}
+
+/* Định dạng các liên kết bên trong menu thả xuống */
+.dropdown-content a {
+    display: block; /* Mỗi liên kết được hiển thị trên một dòng riêng */
+    text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
+    padding: 8px 0; /* Thêm khoảng cách trên và dưới liên kết */
+    white-space: nowrap; /* Ngăn không cho văn bản bị ngắt dòng */
+}
+
+/* Đổi màu nền khi di chuột qua các liên kết trong menu */
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Màu nền sáng hơn để tạo hiệu ứng hover */
+}
+
+
+/* Định dạng nội dung trong phần footer */
+.footer-content {
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử theo chiều ngang */
+    justify-content: space-between; /* Phân bổ khoảng cách đều giữa các phần tử con */
+}
+
+/* Định dạng cho các liên kết trong footer */
+.footer-content a {
+    text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
+    color: white; /* Đặt màu chữ là trắng để nổi bật trên nền tối */
+}
+
+/* Định dạng từng box trong footer */
+.ff {
+    width: 30%; /* Mỗi box chiếm 30% chiều rộng của phần footer */
+    padding: 10px; /* Thêm khoảng cách bên trong để nội dung không sát mép */
+    background-color: inherit; /* Sử dụng màu nền giống phần tử cha */
+    text-align: left; /* Căn chỉnh văn bản trong box về phía trái */
+}
+
+/* Định dạng cho đường kẻ ngang trong footer */
+.hr2 {
+    margin-left: 0; /* Loại bỏ khoảng cách bên trái của đường kẻ ngang */
+    width: 70px; /* Đặt chiều rộng đường kẻ ngang là 70px */
+    height: 3px; /* Đặt chiều cao của đường kẻ ngang là 3px */
+    color: white; /* Đặt màu của đường kẻ ngang là trắng */
+    background-color: white; /* Đặt màu nền của đường kẻ ngang là trắng */
+}
