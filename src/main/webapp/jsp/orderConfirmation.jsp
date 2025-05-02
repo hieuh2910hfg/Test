@@ -15,9 +15,7 @@
     <h2>Đơn hàng của bạn đã được thanh toán thành công!</h2>
     <p>Cảm ơn bạn đã mua hàng tại cửa hàng của chúng tôi.</p>
     <p>Mã đơn hàng của bạn: <strong>${orderId}</strong></p>
-    <p>Phuong thuc thanh toan: <strong>${paymentMethod}</strong></p>
     <p>Tổng số tiền thanh toán: <strong>${totalAmount}</strong></p>
-    <p>Nhan hang tai dia chi: <strong>${address}</strong></p>
 
     <a href="${pageContext.request.contextPath}/jsp/index.jsp">Trở lại trang chủ</a>
 </main>

@@ -120,12 +120,11 @@ else{
 
 <%
     CartDAO cartDao = new CartDAO();
-    List<Cart> cartItems = new ArrayList<Cart>();
+    List<Cart> cartItems = new ArrayList();
     double grandTotal = 0;
-    assert activeuser != null;
     int cartId = cartDao.getCartByUserId(activeuser.getCustomerId());
     cartItems = cartDao.getCartItemsFromCart(cartId);
-    if (cartItems == null || cartItems.isEmpty()){
+    if (cartItems == null || cartItems.size() == 0){
     %>
     	<div class="cart-container">
 		<div class="cart-message">
@@ -211,7 +210,9 @@ else{
     </table>
 
     <div class="cart-summary">
-       <a href="checkout.jsp" class="btn-checkout">Checkout</a>
+        <form method="post" action="${pageContext.request.contextPath}/checkout">
+            <button class="btn-checkout">Checkout</button>
+        </form>
 
     </div>
   </div>

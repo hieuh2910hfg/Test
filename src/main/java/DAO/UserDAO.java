@@ -1,11 +1,12 @@
 package DAO;
 
+import Admin.DBConnection;
+import model.User;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import model.User;
 
 public class UserDAO {
 
@@ -27,7 +28,7 @@ public class UserDAO {
 	        }
 	    }
 
-	
+
  // Kiểm tra đăng nhập với bảng admin
     public boolean validateAdmin(String username, String password) {
         String sql = "SELECT * FROM admins WHERE username = ? AND passwordHash = ?";
@@ -45,7 +46,7 @@ public class UserDAO {
             return false;
         }
     }
-	 
+
 	 public boolean registerUser(String firstname, String lastname, String username, String passwordHash, String email, String phonenumber) {
 	        String insertCustomerSQL = "INSERT INTO customers (first_name, last_name, username, passwordHash, email, phone_number) VALUES (?, ?, ?, ?, ?, ?)";
 	        String insertCartSQL = "INSERT INTO carts (customer_id) VALUES (?)";
@@ -107,7 +108,8 @@ public class UserDAO {
 		}
 		return user;
 	}
-	 public void updateUser(User user) {
+	 public boolean updateUser(User user) {
+		 	boolean flag = false;
 			try {Connection conn = DatabaseConnection.getConnection();
 				String query = "update customers set first_name = ?, last_name = ?, email = ?, phone_number = ? where customer_id = ?";
 				PreparedStatement psmt = conn.prepareStatement(query);
@@ -118,10 +120,34 @@ public class UserDAO {
 				psmt.setInt(5, user.getCustomerId());
 
 				psmt.executeUpdate();
-
+					flag = true;
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
+		 return flag;
+	 }
+	// Lấy khách hàng theo ID
+	public User getCustomerById(int customerId) throws SQLException {
+		String query = "SELECT * FROM customers WHERE customer_id = ?";
+		try (Connection conn = DBConnection.getConnection();
+			 PreparedStatement stmt = conn.prepareStatement(query)) {
+
+			stmt.setInt(1, customerId);
+			try (ResultSet rs = stmt.executeQuery()) {
+				if (rs.next()) {
+					User user = new User();
+					user.setCustomerId(rs.getInt("customer_id"));
+					user.setFirstname(rs.getString("first_name"));
+					user.setLastname(rs.getString("last_name"));
+					user.setUsername(rs.getString("username"));
+					user.setPasswordHash(rs.getString("passwordHash"));
+					user.setEmail(rs.getString("email"));
+					user.setPhonenumber(rs.getString("phone_number"));
+					return user;
+				}
+			}
 		}
+		return null;
+	}
 
 }

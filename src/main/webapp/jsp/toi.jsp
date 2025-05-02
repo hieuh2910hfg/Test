@@ -185,20 +185,31 @@
 
 
 <section class="about-section">
+    <!-- Thay đổi thông tin cá nhân -->
     <figure>
-        <figcaption>Giỏ Hàng</figcaption>
-        <!-- Thêm liên kết bao quanh hình ảnh -->
-        <a href="${pageContext.request.contextPath}/jsp/giohang.jsp">
-            <img src="${pageContext.request.contextPath}/images/giohang.png" width="240" height="240" alt="Giỏ Hàng">
+        <figcaption>Thay đổi thông tin cá nhân</figcaption>
+        <a href="${pageContext.request.contextPath}/jsp/changeInfo.jsp">
+            <img src="data:image/png;base64,iVBORw0KG..." width="240" height="240" alt="Thay đổi thông tin cá nhân">
         </a>
     </figure>
-    <figure>
-        <figcaption>Lịch sử mua hàng</figcaption>
-        <!-- Thêm liên kết bao quanh hình ảnh -->
-        <a href="${pageContext.request.contextPath}/orderHistory">
-            <img src="https://www.seekpng.com/png/detail/301-3019347_history-icon-png.png" width="240" height="240" alt="Giỏ Hàng">
-        </a>
-    </figure>
+
+    <div style="display: flex; justify-content: center; gap: 50px; margin-top: 20px;">
+        <!-- Giỏ hàng -->
+        <figure>
+            <figcaption>Giỏ Hàng</figcaption>
+            <a href="${pageContext.request.contextPath}/jsp/giohang.jsp">
+                <img src="${pageContext.request.contextPath}/images/giohang.png" width="240" height="240" alt="Giỏ Hàng">
+            </a>
+        </figure>
+
+        <!-- Lịch sử mua hàng -->
+        <figure>
+            <figcaption>Lịch sử mua hàng</figcaption>
+            <a href="${pageContext.request.contextPath}/orderHistory">
+                <img src="https://www.seekpng.com/png/detail/301-3019347_history-icon-png.png" width="240" height="240" alt="Lịch sử mua hàng">
+            </a>
+        </figure>
+    </div>
 </section>
 
 <footer>

@@ -57,8 +57,6 @@ public class CheckoutServlet extends HttpServlet {
 
             // Lấy payment_id tiếp theo
             int nextPaymentId = getNextId(conn, "payments", "payment_id");
-            String paymentMethod = request.getParameter("paymentMethod");
-            String address  = request.getParameter("address");
 
             // Lưu thông tin thanh toán vào bảng payments
             String paymentQuery = "INSERT INTO payments (payment_id, customer_id, payment_date, payment_method, amount) VALUES (?, ?, ?, ?, ?)";
@@ -66,7 +64,7 @@ public class CheckoutServlet extends HttpServlet {
                 psPayment.setInt(1, nextPaymentId);
                 psPayment.setInt(2, activeUser.getCustomerId());
                 psPayment.setDate(3, new Date(System.currentTimeMillis()));
-                psPayment.setString(4, paymentMethod);
+                psPayment.setString(4, "Credit Card");
                 psPayment.setBigDecimal(5, BigDecimal.valueOf(grandTotal));
                 psPayment.executeUpdate();
             }
@@ -108,10 +106,8 @@ public class CheckoutServlet extends HttpServlet {
             conn.commit(); // Commit giao dịch nếu thành công
             // Xóa các sản phẩm trong giỏ hàng sau khi thanh toán thành công
             cartDao.clearCart(cartId);
-            request.setAttribute("paymentMethod", paymentMethod);
             request.setAttribute("orderId", nextOrderId);
             request.setAttribute("totalAmount", grandTotal);
-            request.setAttribute("address", address);
             RequestDispatcher dispatcher = request.getRequestDispatcher("jsp/orderConfirmation.jsp");
             dispatcher.forward(request, response);
 

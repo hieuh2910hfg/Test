@@ -43,7 +43,6 @@
     <div class="container">
         <a href="http://localhost:8080/BTL/ProductServlet" class="box">Quản lí sản phẩm</a>
         <a href="http://localhost:8080/BTL/CustomerServlet" class="box">Quản lí khách hàng</a>
-        <a href="http://localhost:8080/BTL/KPIServlet" class="box">KPIs</a>
     </div>
 
 </header>

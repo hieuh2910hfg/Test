@@ -54,7 +54,6 @@ public class ProductDAO {
             System.out.println("Truy vấn sản phẩm với ID: " + id);
 
             ResultSet rs = stmt.executeQuery();
-            System.out.println(rs);
             if (rs.next()) {
                 int productId = rs.getInt("product_id");
                 String description = rs.getString("description");

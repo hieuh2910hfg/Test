@@ -8,12 +8,12 @@ public class User {
 	private String passwordHash;
 	private String email;
 	private String phonenumber;
-	
-	
-	
+
+
+
 	public User() {
-		
-		
+
+
 	}
 
 
@@ -126,7 +126,7 @@ public class User {
 	public void setPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
 	}
-	
-	
-	
+
+
+
 }
