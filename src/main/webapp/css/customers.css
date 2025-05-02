@@ -1,0 +1,140 @@
+/* Tổng thể */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 22px;
+    color: white; /* Màu chữ trắng */
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #28a745; /* Màu nền xanh lá */
+    padding: 10px; /* Khoảng cách giữa chữ và viền */
+    border-radius: 5px; /* Tạo góc bo tròn */
+}
+
+/* Nút Thêm khách hàng mới */
+.btn-add {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 12px 20px;
+    background-color: #007bff; /* Màu xanh dương */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: #0056b3; /* Màu xanh dương đậm khi hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Bảng hiển thị */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 15px 20px; /* Tăng khoảng cách padding để nội dung rõ ràng hơn */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Ngừng tự động xuống dòng */
+    text-overflow: ellipsis; /* Thêm dấu ba chấm khi nội dung quá dài */
+    overflow: hidden; /* Ẩn bớt nội dung dài không vừa */
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 150px; /* Giới hạn chiều rộng của các cột header */
+}
+
+td {
+    text-align: center;
+    border-right: 1px solid #ddd;
+    max-width: 200px; /* Giới hạn chiều rộng của các cột dữ liệu */
+}
+
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f1f8ff;
+}
+
+/* Các nút hành động - Sửa, Xóa */
+.btn-edit, .btn-delete {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Nút Sửa */
+.btn-edit {
+    background-color: #ffc107;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+/* Nút Xóa */
+.btn-delete {
+    background-color: #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
